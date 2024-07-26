@@ -271,7 +271,7 @@ final, proxy
 [rewrite_local]
 ^https://cart.production.store-web.dynamics.com/v\d+\.\d+/cart/loadCart url script-request-body https://raw.githubusercontent.com/iidamie/xbox/main/xbox_cart_opt.js
 ^https://cart.production.store-web.dynamics.com/v\d+\.\d+/cart/loadCart url script-response-body https://raw.githubusercontent.com/iidamie/xbox/main/quanx_getcartid.js
-^https://cart.production.store-web.dynamics.com/v\d+\.\d+/Cart/RequestParentalApproval url script-response-body https://raw.githubusercontent.com/iidamie/xbox/main/quanx_buy.js
+^https://cart.production.store-web.dynamics.com/v\d+\.\d+/Cart/RequestParentalApproval url script-request-body https://raw.githubusercontent.com/iidamie/xbox/main/quanx_buy.js
 ;^http://example\.com/resource1/1/ url reject
 ;^http://example\.com/resource1/2/ url reject-img
 ;^http://example\.com/resource1/3/ url reject-200
