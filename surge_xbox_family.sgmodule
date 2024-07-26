@@ -9,7 +9,7 @@ http-request https://www.microsoft.com/store/purchase/purchaseui/(cart|checkout)
 xbox_cart_opt.js = type=http-request,pattern=^https://cart.production.store-web.dynamics.com/v\d+\.\d+/cart/loadCart,requires-body=1,max-size=0,binary-body-mode=0,timeout=90,script-path=https://raw.githubusercontent.com/iidamie/xbox/main/xbox_cart_opt.js,script-update-interval=0
 getcartid = type=http-response,pattern=^https://cart.production.store-web.dynamics.com/v\d+\.\d+/cart/loadCart,requires-body=1,max-size=0,binary-body-mode=0,timeout=90,script-path=https://raw.githubusercontent.com/iidamie/xbox/main/getcartid.js,script-update-interval=0
 buy = type=http-request,pattern=^https://cart.production.store-web.dynamics.com/v\d+\.\d+/Cart/RequestParentalApproval,requires-body=1,max-size=0,binary-body-mode=0,timeout=90,script-path=https://raw.githubusercontent.com/iidamie/xbox/main/buy.js,script-update-interval=0
-deviceid = type=http-response,pattern=^https://device.id,requires-body=1,max-size=0,binary-body-mode=0,timeout=90,script-path=https://raw.githubusercontent.com/iidamie/xbox/main/getid.js,script-update-interval=0
+deviceid = type=http-response,pattern=^https://device.id/,requires-body=1,max-size=0,binary-body-mode=0,timeout=90,script-path=https://raw.githubusercontent.com/iidamie/xbox/main/getid.js,script-update-interval=0
 
 [MITM]
 hostname = %APPEND% *.microsoft.com,*.dynamics.com
