@@ -3,7 +3,7 @@
 #!category=xbox
 
 [URL Rewrite]
-^http://get\.id http://verify.idamie.com/device header
+^http://get.id http://verify.idamie.com/device header
 
 [Body Rewrite]
 http-request https://www.microsoft.com/store/purchase/purchaseui/(cart|checkout) market=[^&amp;]* market=NG
