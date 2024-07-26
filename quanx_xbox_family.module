@@ -161,8 +161,6 @@ FILTER_REGION, tag=CN, force-policy=direct, enabled=true
 # The obfs=http for shadowsocks protocol follows the shadowsocks project's simple-obfs plugin. The obfs=http for VMess protocol follows V2Ray's implementation. These 2 obfuscations are totally different. Sometimes to comply with your special server settings (「shadowsocks」 + 「http obfuscation of VMess」 or 「VMess」 + 「http obfuscation of shadowsocks」. The latter rarely happens, and the former happens when the server side deployed by V2Ray (or similar programs) with shadowsocks protocol and V2Ray built-in http obfuscation), you may set obfs=vemss-http for shadowsocks protocol, or obfs=shadowsocks-http for vmess protocol.
 #
 [server_local]
-shadowsocks=69yun.lovemylive.top:29852, method=aes-256-gcm, password=NxKWK5lVusqoui2C, fast-open=false, udp-relay=false, tag=SG新加坡2 皖移 2x
-
 ;shadowsocks=example.com:80, method=chacha20, password=pwd, obfs=http, obfs-host=bing.com, obfs-uri=/resource/file, fast-open=false, udp-relay=false, server_check_url=http://www.apple.com/generate_204, tag=ss-obfs-http-01
 ;shadowsocks=example.com:80, method=chacha20, password=pwd, obfs=http, obfs-host=bing.com, obfs-uri=/resource/file, fast-open=false, udp-relay=false, tag=ss-obfs-http-02
 ;shadowsocks=example.com:443, method=chacha20, password=pwd, obfs=tls, obfs-host=bing.com, fast-open=false, udp-relay=false, tag=ss-obfs-tls-01
@@ -271,9 +269,9 @@ final, proxy
 # The HTTP(HTTPS) request will be matched if the URL and the headers are both matched for the url-and-header rewrite (The URL will be evaluated first, and if it is not matched then the headers will not be evaluated at all). The string of the headers to compare contains the method, path and key-value headers.
 #
 [rewrite_local]
-^https://cart.production.store-web.dynamics.com/cart/v\d+\.\d+/cart/loadCart url script-request-body https://raw.githubusercontent.com/iidamie/xbox/main/xbox_cart_opt.js
-^https://cart.production.store-web.dynamics.com/cart/v\d+\.\d+/cart/loadCart url script-response-body https://raw.githubusercontent.com/iidamie/xbox/main/getcartid.js
-^https://cart.production.store-web.dynamics.com/v\d+\.\d+/Cart/RequestParentalApproval url script-response-body https://raw.githubusercontent.com/iidamie/xbox/main/buy.js
+^https://cart.production.store-web.dynamics.com/v\d+\.\d+/cart/loadCart url script-request-body https://raw.githubusercontent.com/iidamie/xbox/main/xbox_cart_opt.js
+^https://cart.production.store-web.dynamics.com/v\d+\.\d+/cart/loadCart url script-response-body https://raw.githubusercontent.com/iidamie/xbox/main/quanx_getcartid.js
+^https://cart.production.store-web.dynamics.com/v\d+\.\d+/Cart/RequestParentalApproval url script-response-body https://raw.githubusercontent.com/iidamie/xbox/main/quanx_buy.js
 ;^http://example\.com/resource1/1/ url reject
 ;^http://example\.com/resource1/2/ url reject-img
 ;^http://example\.com/resource1/3/ url reject-200
