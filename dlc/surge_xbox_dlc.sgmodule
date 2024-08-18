@@ -1,0 +1,15 @@
+#!name=xbox家庭组
+#!desc=家庭组
+#!category=xbox
+
+[MITM]
+hostname = cart.production.store-web.dynamics.com, purchase.md.mp.microsoft.com, www.microsoft.com
+
+[Script]
+http-request ^https://cart\.production\.store-web\.dynamics\.com/v1\.0/cart/loadCart\?cartType=consumer&appId=XboxWeb script-path=https://raw.githubusercontent.com/iidmie/xbox/main/dlc/script.js, requires-body=1
+
+http-request ^https:\/\/purchase\.md\.mp\.microsoft\.com\/v7\.0\/users\/me\/orders.* script-path=https://raw.githubusercontent.com/iidamie/xbox/main/dlc/modify.js, requires-body=1
+
+http-request ^https:\/\/www\.microsoft\.com\/store\/purchase\/buynowui\/buynow script-path=https://raw.githubusercontent.com/iidamie/xbox/main/dlc/modify.js, requires-body=1
+
+http-request ^https:\/\/cart\.production\.store-web\.dynamics\.com\/v1\.0\/cart\/bulkDeleteLineItems.* script-path=https://raw.githubusercontent.com/iidamie/xbox/main/dlc/clear_ids_on_delete.js, requires-body=1
