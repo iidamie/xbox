@@ -3,7 +3,7 @@
 #!category=xbox
 
 [MITM]
-hostname = cart.production.store-web.dynamics.com, purchase.md.mp.microsoft.com, www.microsoft.com
+hostname = *.dynamics.com, *.microsoft.com
 
 [Script]
 http-request ^https://cart\.production\.store-web\.dynamics\.com/v1\.0/cart/loadCart\?cartType=consumer&appId=XboxWeb script-path=https://raw.githubusercontent.com/iidmie/xbox/main/dlc/script.js, requires-body=1
