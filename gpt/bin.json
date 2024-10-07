@@ -5,6 +5,9 @@
     "x-rapidapi-key": "dcd701c40fmshd790a6b58469315p16aa7bjsn7533613fd049"
   },
   "method": "POST",
+  "input": {
+     "required": true
+  },
   "response": {
     "content": {
       "input_type": "json",
