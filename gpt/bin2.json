@@ -14,7 +14,7 @@
     "error": {
       "input_type": "json",
       "output_type": "text",
-      "output": "Error: {{message.message}}"
+      "output": "Error: {{message}}"
     },
     "render": "`卡BIN` **{{input}}** `查询结果如下`\n\n{{output}}"
   }
