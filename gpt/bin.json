@@ -1,0 +1,21 @@
+{
+  "url": "https://bin-ip-checker.p.rapidapi.com/?bin={{DATA}}",
+  "headers": {
+    "x-rapidapi-host": "bin-ip-checker.p.rapidapi.com",
+    "x-rapidapi-key": "dcd701c40fmshd790a6b58469315p16aa7bjsn7533613fd049"
+  },
+  "method": "POST",
+  "response": {
+    "content": {
+      "input_type": "json",
+      "output_type": "MarkdownV2",
+      "output": "`卡BIN是否有效: {{BIN.valid}}`\n\n卡品牌💳: {{#if BIN.scheme}}{{BIN.scheme}}{{#else}}无{{/if}}\n卡类型💰: {{#if BIN.type}}{{BIN.type}}{{#else}}无{{/if}}\n卡等级🌟: {{#if BIN.level}}{{BIN.level}}{{#else}}无{{/if}}\n\n发卡国家🌍: {{#if BIN.country.flag}}{{BIN.country.flag}}{{/if}} {{#if BIN.country.name}}{{BIN.country.name}}{{#else}}无{{/if}} ({{#if BIN.country.numeric}}{{BIN.country.numeric}}{{/if}})\n卡货币💵: {{#if BIN.currency}}{{BIN.currency}}{{#else}}无{{/if}}\n\n发卡机构🏦: {{#if BIN.issuer.name}}{{BIN.issuer.name}}{{#else}}无{{/if}}\n发卡机构联系方式📞: {{#if BIN.issuer.phone}}{{BIN.issuer.phone}}{{#else}}无{{/if}}\n发卡机构网站🔗: {{#if BIN.issuer.website}}{{BIN.issuer.website}}{{#else}}无{{/if}}\n\n是否预付卡🪙: {{#if BIN.is_prepaid}}{{#if BIN.is_prepaid}}✔️{{else}}❌{{/if}}{{else}}无{{/if}}\n是否商业卡🏢: {{#if BIN.is_commercial}}{{#if BIN.is_commercial}}✔️{{else}}❌{{/if}}{{else}}无{{/if}}"
+    },
+    "error": {
+      "input_type": "text",
+      "output_type": "text",
+      "output": "Error: {{.}}"
+    },
+    "render": "`卡BIN` **{{input}}** `查询结果如下`\n\n{{output}}"
+  }
+}
