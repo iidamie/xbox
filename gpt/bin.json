@@ -9,10 +9,10 @@
     "content": {
       "input_type": "json",
       "output_type": "MarkdownV2",
-      "output": "卡BIN: {{#if BIN.number}}{{BIN.numbrr}}{{#else}}无{{/if}}\n卡BIN是否有效: {{#if BIN.valid}}{{BIN.valid}}{{#else}}无{{/if}}\n\n卡品牌💳: {{#if BIN.scheme}}{{BIN.scheme}}{{#else}}无{{/if}}\n卡类型💰: {{#if BIN.type}}{{BIN.type}}{{#else}}无{{/if}}\n卡等级🌟: {{#if BIN.level}}{{BIN.level}}{{#else}}无{{/if}}\n\n发卡国家🌍: {{#if BIN.country.flag}}{{BIN.country.flag}}{{/if}} {{#if BIN.country.name}}{{BIN.country.name}}{{#else}}无{{/if}} ({{#if BIN.country.numeric}}{{BIN.country.numeric}}{{/if}})\n卡货币💵: {{#if BIN.currency}}{{BIN.currency}}{{#else}}无{{/if}}\n\n发卡机构🏦: {{#if BIN.issuer.name}}{{BIN.issuer.name}}{{#else}}无{{/if}}\n发卡机构联系方式📞: {{#if BIN.issuer.phone}}+{{BIN.issuer.phone}}{{#else}}无{{/if}}\n发卡机构网站🔗: {{#if BIN.issuer.website}}{{BIN.issuer.website}}{{#else}}无{{/if}}\n\n是否预付卡🪙: {{#if BIN.is_prepaid}}{{BIN.is_prepaid}}{{#else}}无{{/if}}\n是否商业卡🏢: {{#if BIN.is_commercial}}{{BIN.is_commercial}}{{#else}}无{{/if}}"
+      "output": "卡BIN: {{#if BIN.number}}{{BIN.numbrr}}{{#else}}无{{/if}}\n卡品牌💳: {{#if BIN.scheme}}{{BIN.scheme}}{{#else}}无{{/if}}\n卡类型💰: {{#if BIN.type}}{{BIN.type}}{{#else}}无{{/if}}\n卡等级🌟: {{#if BIN.level}}{{BIN.level}}{{#else}}无{{/if}}\n\n发卡国家🌍: {{#if BIN.country.flag}}{{BIN.country.flag}}{{/if}} {{#if BIN.country.name}}{{BIN.country.name}}{{#else}}无{{/if}} ({{#if BIN.country.numeric}}{{BIN.country.numeric}}{{/if}})n国家代码🌍: {{#if BIN.country.alpha3}}{{BIN.country.alpha3}}{{#else}}无{{/if}}\n卡货币💵: {{#if BIN.currency}}{{BIN.currency}}{{#else}}无{{/if}}\n\n发卡机构🏦: {{#if BIN.issuer.name}}{{BIN.issuer.name}}{{#else}}无{{/if}}\n发卡机构联系方式📞: {{#if BIN.issuer.phone}}+{{BIN.issuer.phone}}{{#else}}无{{/if}}\n发卡机构网站🔗: {{#if BIN.issuer.website}}{{BIN.issuer.website}}{{#else}}无{{/if}}\n\n是否预付卡🪙: {{#if BIN.is_prepaid}}{{BIN.is_prepaid}}{{#else}}无{{/if}}\n是否商业卡🏢: {{#if BIN.is_commercial}}{{BIN.is_commercial}}{{#else}}无{{/if}}"
     },
     "error": {
-      "input_type": "json",
+      "input_type": "text",
       "output_type": "text",
       "output": "Error: {{message}}"
     },
