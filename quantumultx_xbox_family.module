@@ -269,7 +269,7 @@ final, proxy
 # The HTTP(HTTPS) request will be matched if the URL and the headers are both matched for the url-and-header rewrite (The URL will be evaluated first, and if it is not matched then the headers will not be evaluated at all). The string of the headers to compare contains the method, path and key-value headers.
 #
 [rewrite_local]
-^https://cart.production.store-web.dynamics.com/v\d+\.\d+/cart/loadCart url script-request-body https://raw.githubusercontent.com/iidamie/xbox/main/xbox_cart_opt.js
+^https://cart.production.store-web.dynamics.com/v\d+\.\d+/cart/loadCart url script-request-body https://raw.githubusercontent.com/iidamie/xbox/main/quanx_cart.js
 ^https://cart.production.store-web.dynamics.com/v\d+\.\d+/cart/loadCart url script-response-body https://raw.githubusercontent.com/iidamie/xbox/main/quanx_getcartid.js
 ^https://cart.production.store-web.dynamics.com/v\d+\.\d+/Cart/RequestParentalApproval url script-request-body https://raw.githubusercontent.com/iidamie/xbox/main/quanx_buy.js
 ;^http://example\.com/resource1/1/ url reject
